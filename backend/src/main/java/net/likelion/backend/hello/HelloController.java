@@ -29,9 +29,9 @@ public class HelloController {
     public Map<String, String> helloSearch(
             @RequestParam String keyword,
             @RequestParam(defaultValue = "1") int page){
-            Map<String,String> response = new HashMap<>();
-            response.put("keyword", keyword);
-            response.put("page", String.valueOf(page));
-            return response;
+        Map<String,String> response = new HashMap<>();
+        response.put("keyword", keyword);
+        response.put("page", String.valueOf(page));
+        return response;
     }
 }
