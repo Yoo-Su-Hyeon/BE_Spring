@@ -12,7 +12,7 @@ RUN ./gradlew dependencies --no-daemon || true
 
 # 소스 복사 후 실행 가능한 .jar 파일로 빌드
 COPY . .
-RUN ./gradlew clean bootJar --no-daemon
+RUN chmod +x gradlew && ./gradlew clean bootJar --no-daemon
 
 # ===== 2) RUNTIME STAGE =====
 # 실행에 필요한 가벼운 JRE 21 환경만 가져옵니다.
